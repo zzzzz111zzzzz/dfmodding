@@ -4,10 +4,10 @@
 --Call with the creature selected, script will check if there are creatures with opposite gender or no gender and will
 --impregnate the female or genderless creature with genes of the male or genderless creature.
 --Non-historical parents will be promoted to historical status.
---"impregnate" = instant birth
---"impregnate -pregtime 10000" = birth within 10000 ticks
+--"impregnate" = almost instant birth
+--"impregnate -pregtime 10000" = birth within 10000 ticks, long times might not work in adventurer mode
 --Works on wild populations
---Race and case of a child depend on mother
+--Race and caste of a child depend on mother
 
 local utils=require 'utils'
 
@@ -98,6 +98,12 @@ local function createFigure(trgunit,he,he_group)
 	  trgunit.status.current_soul.orientation_flags.romance_male = true
 	  trgunit.status.current_soul.orientation_flags.marry_male = true
 	end
+  else
+	hf.orientation_flags.indeterminate = trgunit.status.current_soul.orientation_flags.indeterminate
+	hf.orientation_flags.romance_female = trgunit.status.current_soul.orientation_flags.romance_female
+	hf.orientation_flags.marry_female = trgunit.status.current_soul.orientation_flags.marry_female	
+	hf.orientation_flags.romance_male = trgunit.status.current_soul.orientation_flags.romance_male
+	hf.orientation_flags.marry_male = trgunit.status.current_soul.orientation_flags.marry_male  
   end
   
   df.global.world.history.figures:insert("#",hf)
