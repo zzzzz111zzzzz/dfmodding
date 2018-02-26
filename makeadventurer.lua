@@ -1,4 +1,10 @@
--- Turn creature into adventurer
+-- Turn creature into retired adventurer
+
+--BACKUP YOUR SAVES
+--Call on selected crature to make it a retired adventurer
+--Works on wild, civilized, generated, any creatures
+--Position holders might lost their position
+--Non-historical creatures will be promoted to historical status
 
 local args = {...}
 local utils=require 'utils'
