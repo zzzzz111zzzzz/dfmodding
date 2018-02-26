@@ -1,5 +1,14 @@
 -- Impregnate a creature
 
+--BACKUP YOUR SAVES
+--Call with the creature selected, script will check if there are creatures with opposite gender or no gender and will
+--impregnate the female or genderless creature with genes of the male or genderless creature.
+--Non-historical parents will be promoted to historical status.
+--"impregnate" = instant birth
+--"impregnate -pregtime 10000" = birth within 10000 ticks
+--Works on wild populations
+--Race and case of a child depend on mother
+
 local utils=require 'utils'
 
 validArgs = --[[validArgs or]]utils.invert({
