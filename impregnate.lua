@@ -1,8 +1,8 @@
 -- Impregnate a creature
 
 --BACKUP YOUR SAVES
---Call with the creature selected, script will check if there are creatures with opposite gender or no gender and will
---impregnate the female or genderless creature with genes of the male or genderless creature.
+--Call with the creature selected, script will check if there are creatures with opposite gender or no gender on the same
+--or nearest tile and will impregnate the female or genderless creature with genes of the male or genderless creature.
 --Non-historical parents will be promoted to historical status.
 --"impregnate" = almost instant birth
 --"impregnate -pregtime 10000" = birth within 10000 ticks, long times might not work in adventurer mode
